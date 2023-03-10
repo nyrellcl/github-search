@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import searchIcon from "./assets/icon-search.svg";
 import "./index-sass/index.css";
 
@@ -9,7 +9,17 @@ function App() {
   const [user, setUser] = useState<any>("");
   const [isLight, setIsLight] = useState<boolean>(true);
 
-  useEffect(() => {
+  /*useEffect(() => {
+    
+  }, [searchInput]);*/
+
+  const handleSearchInputChange = (e: any) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleUserNameSearch = (e: React.FormEvent) => {
+    //if not preventDefault form will refresh the page on submit
+    e.preventDefault();
     if (searchInput) {
       fetch(`${BASE_API_URL}/users/${searchInput}`)
         .then((resp): Promise<any> => resp.json())
@@ -20,15 +30,6 @@ function App() {
           setUser(data);
         });
     }
-  }, [searchInput]);
-
-  const handleSearchInputChange = (e: any) => {
-    setSearchInput(e.target.value);
-  };
-
-  const handleUserNameSearch = (e: React.FormEvent) => {
-    //if not preventDefault form will refresh the page on submit
-    e.preventDefault();
     setSearchInput(searchInput.trim());
   };
 
@@ -118,7 +119,9 @@ function App() {
         </section>
       ) : (
         <>
-          <section className={isLight ? "profile-section": "profile-section dark"}>
+          <section
+            className={isLight ? "profile-section" : "profile-section dark"}
+          >
             <article className="profile-section__card">
               <article className="profile-section__card__info">
                 <img
@@ -136,7 +139,13 @@ function App() {
                 <p>{user.bio}</p>
               </div>
 
-              <article className={isLight ? "profile-section__card__socials": "profile-section__card__socials dark"}>
+              <article
+                className={
+                  isLight
+                    ? "profile-section__card__socials"
+                    : "profile-section__card__socials dark"
+                }
+              >
                 <div className="profile-section__card__socials__count">
                   <span>Repos</span>
                   <span>{user.public_repos}</span>
@@ -151,9 +160,17 @@ function App() {
                 </div>
               </article>
             </article>
-            <footer className={isLight ? "footer-profile" : "footer-profile dark"}>
+            <footer
+              className={isLight ? "footer-profile" : "footer-profile dark"}
+            >
               <nav className="footer-profile__bar">
-                <ul className={isLight ? "footer-profile__bar__list" : "footer-profile__bar__list dark"}>
+                <ul
+                  className={
+                    isLight
+                      ? "footer-profile__bar__list"
+                      : "footer-profile__bar__list dark"
+                  }
+                >
                   <a href="/">
                     <svg
                       height="20"
