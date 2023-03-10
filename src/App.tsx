@@ -118,7 +118,7 @@ function App() {
         </section>
       ) : (
         <>
-          <section className="profile-section">
+          <section className={isLight ? "profile-section": "profile-section dark"}>
             <article className="profile-section__card">
               <article className="profile-section__card__info">
                 <img
@@ -136,7 +136,7 @@ function App() {
                 <p>{user.bio}</p>
               </div>
 
-              <article className="profile-section__card__socials">
+              <article className={isLight ? "profile-section__card__socials": "profile-section__card__socials dark"}>
                 <div className="profile-section__card__socials__count">
                   <span>Repos</span>
                   <span>{user.public_repos}</span>
@@ -151,9 +151,9 @@ function App() {
                 </div>
               </article>
             </article>
-            <footer className="footer-profile">
+            <footer className={isLight ? "footer-profile" : "footer-profile dark"}>
               <nav className="footer-profile__bar">
-                <ul className="footer-profile__bar__list">
+                <ul className={isLight ? "footer-profile__bar__list" : "footer-profile__bar__list dark"}>
                   <a href="/">
                     <svg
                       height="20"
