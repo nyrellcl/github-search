@@ -4,10 +4,19 @@
   box-sizing: border-box;
 }
 
-#root, body, html {
+#root,
+body,
+html {
   min-width: 23.4375rem;
   font-family: "Space Mono", monospace;
   height: 100%;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  gap: 1.203125rem;
+  text-decoration: none;
 }
 
 .App {
@@ -18,6 +27,24 @@
 .App.dark {
   background-color: #141d2f;
   color: white;
+}
+
+.to-search {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 50%;
+}
+.to-search__content {
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  background-color: #fefefe;
+  padding: 1.25rem 0.9375rem;
+  border-radius: 1rem;
+}
+.to-search__content.dark {
+  background-color: #1e2a47;
 }
 
 .header-container {
@@ -53,6 +80,7 @@
   align-items: center;
   padding: 0.46875rem;
   justify-content: space-between;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 .header-container .form-container input {
   border: none;
@@ -72,6 +100,7 @@
 }
 .header-container .form-container.dark {
   background-color: #1e2a47;
+  box-shadow: none;
 }
 .header-container .form-container.dark input {
   background-color: #1e2a47;
@@ -85,4 +114,59 @@
 }
 .header-container .form-container.dark input::placeholder {
   color: white;
+}
+
+.profile-section {
+  width: 90%;
+  margin: 1rem auto auto auto;
+  padding: 1.0625rem 1.5rem;
+  border-radius: 0.9375rem;
+  background-color: white;
+}
+.profile-section__card__info {
+  display: flex;
+  align-items: center;
+  gap: 1.1875rem;
+}
+.profile-section__card__info__picture {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 50%;
+}
+.profile-section__card__info .profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.profile-section__card__socials {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 1.125rem 0.875rem;
+  background-color: #f6f8ff;
+}
+.profile-section__card__socials__count {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile-section__card__socials__count span:first-child {
+  color: #4b6a9b;
+  font-size: 0.6875rem;
+}
+.profile-section__card__socials__count span:nth-child(2) {
+  font-weight: 700;
+}
+
+.footer-profile {
+  width: 90%;
+  margin: 1.5rem auto auto auto;
+  background-color: #fff;
+}
+.footer-profile__bar__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }/*# sourceMappingURL=index.css.map */

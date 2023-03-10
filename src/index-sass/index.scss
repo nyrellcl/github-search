@@ -2,84 +2,174 @@
 
 @import "./Global-Sass/colors", "./Global-Sass/function";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-#root,body, html{
-    min-width: rem(375);
-    font-family: 'Space Mono', monospace;
-    height: 100%;
+#root,
+body,
+html {
+  min-width: rem(375);
+  font-family: "Space Mono", monospace;
+  height: 100%;
 }
 
-.App{
-    background-color: $light-bg-card;
-    height: 100%;
-
+a {
+  display: flex;
+  align-items: center;
+  gap: rem(19.25);
+  text-decoration: none;
 }
 
-.App.dark{
-    background-color: $dark-bg-main;
-    color: #ffff;
+.App {
+  background-color: $light-bg-card;
+  height: 100%;
 }
 
-.header-container{
-    width: 90%;
-    margin: 0 auto;
-    &__bar{
-        display: flex;
-        align-items: center;
-        padding-top: rem(31);
-        .switch-container{
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-            gap: 1rem;
-            label{
-                text-transform: uppercase;
-                font-weight: 700;
-                letter-spacing: rem(2.5);
-            }
-            input{
-                appearance: none;
-            }
-        }
+.App.dark {
+  background-color: $dark-bg-main;
+  color: #ffff;
+}
+
+.to-search {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 50%;
+  &__content {
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    background-color: $light-bg-main;
+    padding: rem(20) rem(15);
+    border-radius: rem(16);
+  }
+  &__content.dark {
+    background-color: $dark-bg-card;
+  }
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+  &__bar {
+    display: flex;
+    align-items: center;
+    padding-top: rem(31);
+    .switch-container {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      gap: 1rem;
+      label {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: rem(2.5);
+      }
+      input {
+        appearance: none;
+      }
     }
-    .form-container{
-        margin-top: rem(36);
-        border-radius: rem(15);
-        background-color: $light-bg-main;
+  }
+  .form-container {
+    margin-top: rem(36);
+    border-radius: rem(15);
+    background-color: $light-bg-main;
+    display: flex;
+    align-items: center;
+    padding: rem(7.5);
+    justify-content: space-between;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+    input {
+      border: none;
+      font-family: "Space Mono", monospace;
+      width: rem(184);
+      height: rem(25);
+    }
+    .btn-submit {
+      padding: rem(12.5) rem(18);
+      font-family: "Space Mono", monospace;
+      border: none;
+      background-color: $btn-color;
+      font-weight: 700;
+      color: #ffff;
+      letter-spacing: rem(1);
+      border-radius: rem(10);
+    }
+  }
+  .form-container.dark {
+    background-color: $dark-bg-card;
+    box-shadow: none;
+    input {
+      background-color: $dark-bg-card;
+      color: #ffff;
+      &::placeholder {
+        color: #ffff;
+      }
+    }
+  }
+}
+
+.profile-section {
+  width: 90%;
+  margin: rem(16) auto auto auto;
+  padding: rem(17) rem(24);
+  border-radius: rem(15);
+  background-color: #ffff;
+  &__card {
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: rem(19);
+      &__picture {
+        width: rem(70);
+        height: rem(70);
+        border-radius: 50%;
+      }
+      .profile-content {
         display: flex;
-        align-items: center;
-        padding: rem(7.5);
-        justify-content: space-between;
-        input{
-            border: none;
-            font-family: 'Space Mono', monospace;
-            width: rem(184);
-            height: rem(25);
-        }
-        .btn-submit{
-            padding: rem(12.5) rem(18);
-            font-family: 'Space Mono', monospace;
-            border: none;
-            background-color: $btn-color;
+        flex-direction: column;
+        gap: rem(6);
+      }
+    }
+    &__socials {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+      padding: rem(18) rem(14);
+      background-color: $light-bg-card;
+      &__count {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        span {
+          &:first-child {
+            color: $light-text2;
+            font-size: rem(11);
+          }
+          &:nth-child(2) {
             font-weight: 700;
-            color: #ffff;
-            letter-spacing: rem(1);
-            border-radius: rem(10);
+          }
         }
+      }
     }
-    .form-container.dark{
-        background-color: $dark-bg-card;
-        input{
-            background-color: $dark-bg-card;
-            color: #ffff;
-            &::placeholder{
-                color: #ffff;
-            }
-        }
+  }
+}
+
+.footer-profile {
+  width: 90%;
+  margin: rem(24) auto auto auto;
+  background-color: #fff;
+  &__bar {
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
+  }
 }
