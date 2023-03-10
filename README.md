@@ -7,6 +7,7 @@
 Hello! Welcome to my FrontEnd Mentor project challenge where we are tasked to develop a search page that searches for all the github users using an API. To complete this project I used the following tech stack:
 
 - React for the FrontEnd
+- Typscript
 - SASS/SCSS a CSS-preprocessor for the styling 
 - Git for continuous integration and Github Pages for continous deployment
 
