@@ -4,9 +4,13 @@
 
 ## Welcome! 👋
 
-Thanks for purchasing this premium Frontend Mentor coding challenge.
+Hello! Welcome to my FrontEnd Mentor project challenge where we are tasked to develop a search page that searches for all the github users using an API. To complete this project I used the following tech stack:
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects. These premium challenges are perfect portfolio pieces, so please feel free to use what you create in your portfolio to show others.
+- React for the FrontEnd
+- SASS/SCSS a CSS-preprocessor for the styling 
+- Git for continuous integration and Github Pages for continous deployment
+
+As a front-end developer, it's important to be used to working with API's therefore I wanted to become more familiar working with them and decided to complete this challenge. This gave me a further understanding of Promises and using the fetch() method when working and retreiving data from API's. The more I increase my knowledge about front-end development the more I realize how important it is to also understand the back-end(I guess you can say I'm beginning to lean more on the full-stack side). Becoming familiar with the back-end and learning how data is called, retreived, and displayed to the user allows me, as a developer, to expand my understanding how creating applications for users. 
 
 **To do this challenge, you need a good understanding of HTML, CSS, and JavaScript.**
 
@@ -18,11 +22,11 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 Your users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Search for GitHub users by their username
-- See relevant user information based on their search
-- Switch between light and dark themes
+- View the optimal layout for the app depending on their device's screen size (DONE)
+- See hover states for all interactive elements on the page (DONE)
+- Search for GitHub users by their username (DONE)
+- See relevant user information based on their search (DONE)
+- Switch between light and dark themes (DONE)
 - **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
@@ -33,10 +37,10 @@ The GitHub users API endpoint is `https://api.github.com/users/:username`. So, i
 
 - On first load, show the profile information for Octocat.
 - Display an error message (as shown in the design) if no user is found when a new search is made.
-- If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol.
-- If a GitHub user's bio is empty, show the text "This profile has no bio" with transparency added (as shown in the design). The lorem ipsum text in the designs shows how the bio should look when it is present.
-- If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added (as shown in the design).
-- Website, twitter, and company information should all be links to those resaources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
+- If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol. (DONE)
+- If a GitHub user's bio is empty, show the text "This profile has no bio" with transparency added (as shown in the design). The lorem ipsum text in the designs shows how the bio should look when it is present. (DONE)
+- If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added (as shown in the design). (DONE)
+- Website, twitter, and company information should all be links to those resaources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`. (DONE)
 
 ## Where to find everything
 
@@ -46,16 +50,6 @@ All the required assets for this project are in the `/assets` folder. The assets
 
 The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
 
-## Building your project
-
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/). **⚠️ IMPORTANT ⚠️: There are already a couple of `.gitignore` files in this project. Please do not remove them or change the content of the files. If you create a brand new project, please use the `.gitignore` files provided in your new codebase. This is to avoid the accidental upload of the design files to GitHub. With these premium challenges, please be sure not to share the design files in your GitHub repo. Thanks!**
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
 ## Deploying your project
 
@@ -67,13 +61,6 @@ As mentioned above, there are many ways to host your project for free. Our recom
 
 You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
 ## Submitting your solution
 
@@ -95,9 +82,3 @@ There are multiple places you can share your solution:
 We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-**Have fun building!** 🚀
