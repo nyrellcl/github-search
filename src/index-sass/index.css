@@ -47,6 +47,10 @@ input:-internal-autofill-selected {
     background-color: #fefefe;
     padding: 1.25rem 0.9375rem;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0 auto;
   }
   .to-search__content.dark {
     background-color: #1e2a47;
@@ -70,6 +74,11 @@ input:-internal-autofill-selected {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.15625rem;
+    color: #4b6a9b;
+  }
+  .header-container__bar .switch-container .light-switch {
+    color: white;
+    cursor: pointer;
   }
   .header-container__bar .switch-container input {
     -webkit-appearance: none;
@@ -194,7 +203,9 @@ input:-internal-autofill-selected {
   }
 }
 @media only screen and (min-width: 768px) {
-  .header-container, .to-search, .profile-section {
+  .header-container,
+.to-search,
+.profile-section {
     width: 75%;
   }
   .header-container .form-container input {
@@ -216,5 +227,55 @@ input:-internal-autofill-selected {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.1875rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-container {
+    width: 50%;
+  }
+  .header-container__bar .switch-container {
+    transition: all 250ms ease-in-out;
+  }
+  .header-container__bar .switch-container .dark-switch:hover, .header-container__bar .switch-container svg:hover {
+    cursor: pointer;
+    color: #222731;
+  }
+  .header-container__bar .switch-container .light-switch:hover {
+    color: #4b6a9b;
+  }
+  .header-container .form-container input {
+    cursor: pointer;
+    width: 100%;
+    margin-left: 1.5rem;
+  }
+  .header-container .form-container .btn-submit:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+  }
+  .profile-section {
+    width: 50%;
+  }
+  .profile-section__card__bio {
+    width: 30rem;
+    margin: 1.5rem 0 2rem auto;
+  }
+  .profile-section__card__socials {
+    width: 30rem;
+    margin-left: auto;
+  }
+  .profile-section__card__info h2 {
+    font-size: 1.625rem;
+  }
+  .profile-section__card__info .profile-content {
+    width: 30rem;
+    margin-left: auto;
+  }
+  .profile-section__card__info__picture {
+    width: 7.3125rem;
+    height: 7.3125rem;
+  }
+  .footer-profile {
+    width: 30rem;
+    margin: 2.3125rem 0 3rem auto;
   }
 }/*# sourceMappingURL=index.css.map */

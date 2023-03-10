@@ -42,7 +42,7 @@ function App() {
 
           {isLight ? (
             <div className="switch-container">
-              <label htmlFor="switch">Dark</label>
+              <label htmlFor="switch" className="dark-switch">Dark</label>
               <input
                 onClick={handleModeSwitch}
                 type="radio"
@@ -64,7 +64,7 @@ function App() {
             </div>
           ) : (
             <div className="switch-container">
-              <label htmlFor="switch">Light</label>
+              <label htmlFor="switch" className="light-switch">Light</label>
               <input
                 onClick={handleModeSwitch}
                 type="radio"
@@ -134,7 +134,7 @@ function App() {
                 </article>
               </article>
               <div className="profile-section__card__bio">
-                <p>{user.bio === null ? "Not Available" : user.bio}</p>
+                <p>{user.bio === null ? "This profile has no bio" : user.bio}</p>
               </div>
 
               <article
