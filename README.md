@@ -4,8 +4,9 @@
 
 ## Welcome! 👋
 
-Hello! Welcome to my FrontEnd Mentor project challenge where we are tasked to develop a search page that searches for all the github users using an API. To complete this project I used the following tech stack:
+Hello! Welcome to my FrontEnd Mentor project challenge where we are tasked to develop a search page that searches for all the github users using an API. To complete this project I used the following tech stack and resources:
 
+- Jack Herrington on Youtube for React Resources [https://www.youtube.com/channel/UC6vRUjYqDuoUsYsku86Lrsw]
 - React for the FrontEnd
 - Typscript
 - SASS/SCSS a CSS-preprocessor for the styling 
