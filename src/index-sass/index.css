@@ -246,7 +246,7 @@ input:-internal-autofill-selected {
   .header-container .form-container input {
     cursor: pointer;
     width: 100%;
-    margin-left: 1.5rem;
+    margin: 0 1.5rem;
   }
   .header-container .form-container .btn-submit:hover {
     cursor: pointer;
