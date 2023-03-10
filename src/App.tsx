@@ -1,8 +1,7 @@
-import { useState} from "react";
+import { useState } from "react";
 import searchIcon from "./assets/icon-search.svg";
 import "./index-sass/index.css";
-
-const BASE_API_URL = `https://api.github.com`;
+import { fetchUserApi } from "./api/fetchUserApi";
 
 function App() {
   const [searchInput, setSearchInput] = useState<string>("");
@@ -14,24 +13,21 @@ function App() {
   }, [searchInput]);*/
 
   const fetchUser = () => {
-  fetch(`${BASE_API_URL}/users/${searchInput}`)
-  .then((resp): Promise<any> => resp.json())
-  .then((data) => {
-    setUser(data);
-  })
-}
+    fetchUserApi(searchInput).then((data): void => {
+      setUser(data);
+    });
+  };
 
   const handleSearchInputChange = (e: any) => {
     setSearchInput(e.target.value);
-    
   };
 
   const handleUserNameSearch = (e: React.FormEvent) => {
     //if not preventDefault form will refresh the page on submit
     e.preventDefault();
     if (searchInput) {
-      fetchUser()
-    };
+      fetchUser();
+    }
     setSearchInput(searchInput.trim());
   };
 
@@ -46,7 +42,9 @@ function App() {
 
           {isLight ? (
             <div className="switch-container">
-              <label htmlFor="switch" className="dark-switch">Dark</label>
+              <label htmlFor="switch" className="dark-switch">
+                Dark
+              </label>
               <input
                 onClick={handleModeSwitch}
                 type="radio"
@@ -68,7 +66,9 @@ function App() {
             </div>
           ) : (
             <div className="switch-container">
-              <label htmlFor="switch" className="light-switch">Light</label>
+              <label htmlFor="switch" className="light-switch">
+                Light
+              </label>
               <input
                 onClick={handleModeSwitch}
                 type="radio"
@@ -138,7 +138,9 @@ function App() {
                 </article>
               </article>
               <div className="profile-section__card__bio">
-                <p>{user.bio === null ? "This profile has no bio" : user.bio}</p>
+                <p>
+                  {user.bio === null ? "This profile has no bio" : user.bio}
+                </p>
               </div>
 
               <article
@@ -184,7 +186,9 @@ function App() {
                         fill="#4b6a9b"
                       />
                     </svg>
-                    <li>{user.location === null ? "Not Available" : user.location}</li>
+                    <li>
+                      {user.location === null ? "Not Available" : user.location}
+                    </li>
                   </a>
                   <a href={user.blog}>
                     <svg
@@ -210,7 +214,11 @@ function App() {
                         fill="#4b6a9b"
                       />
                     </svg>
-                    <li>{user.twitter_username === null ? "Not Available" : user.twitter_username}</li>
+                    <li>
+                      {user.twitter_username === null
+                        ? "Not Available"
+                        : user.twitter_username}
+                    </li>
                   </a>
                   <a href={user.company}>
                     <svg
@@ -222,7 +230,9 @@ function App() {
                         <path d="M10.858 1.558L1.7.167A1.477 1.477 0 00.517.492 1.49 1.49 0 000 1.608v17.559c0 .458.375.833.833.833h2.709v-4.375c0-.808.65-1.458 1.458-1.458h2.083c.809 0 1.459.65 1.459 1.458V20h3.541V3a1.46 1.46 0 00-1.225-1.442zM4.583 12.292h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm4.167 7.5H7.5a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5H7.5a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5H7.5a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5H7.5a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zM18.85 9.035l-5.933-1.242V20h5.625A1.46 1.46 0 0020 18.542V10.46c0-.688-.47-1.274-1.15-1.425zM16.875 17.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25zm0-2.5h-1.25a.625.625 0 010-1.25h1.25a.625.625 0 010 1.25z" />
                       </g>
                     </svg>
-                    <li>{user.company === null ? "Not Available" : user.company}</li>
+                    <li>
+                      {user.company === null ? "Not Available" : user.company}
+                    </li>
                   </a>
                 </ul>
               </nav>
