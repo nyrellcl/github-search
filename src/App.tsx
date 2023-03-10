@@ -13,6 +13,14 @@ function App() {
     
   }, [searchInput]);*/
 
+  const fetchUser = () => {
+  fetch(`${BASE_API_URL}/users/${searchInput}`)
+  .then((resp): Promise<any> => resp.json())
+  .then((data) => {
+    setUser(data);
+  })
+}
+
   const handleSearchInputChange = (e: any) => {
     setSearchInput(e.target.value);
     
@@ -22,12 +30,8 @@ function App() {
     //if not preventDefault form will refresh the page on submit
     e.preventDefault();
     if (searchInput) {
-      fetch(`${BASE_API_URL}/users/${searchInput}`)
-        .then((resp): Promise<any> => resp.json())
-        .then((data) => {
-          setUser(data);
-        });
-    }
+      fetchUser()
+    };
     setSearchInput(searchInput.trim());
   };
 
