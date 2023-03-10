@@ -98,7 +98,7 @@ function App() {
             value={searchInput}
             id="search"
             type="text"
-            placeholder="Search for github user..."
+            placeholder="Search for github username..."
           />
           <button type="submit" className="btn-submit">
             Search
