@@ -23,7 +23,6 @@ function App() {
   };
 
   const handleUserNameSearch = (e: React.FormEvent) => {
-    //if not preventDefault form will refresh the page on submit
     e.preventDefault();
     if (searchInput) {
       fetchUser();
@@ -31,9 +30,18 @@ function App() {
     setSearchInput(searchInput.trim());
   };
 
+  function formatDate(dateString: string | number) {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: "long" });
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
+  }
+
   function handleModeSwitch() {
     setIsLight(!isLight);
   }
+
   return (
     <main className={isLight ? "App" : "App dark"}>
       <header className="header-container">
@@ -134,7 +142,7 @@ function App() {
                 <article className="profile-content">
                   <h2>{user.login}</h2>
                   <a href={user.html_url}>@{user.login}</a>
-                  <span>Joined {user.created_at}</span>
+                  <span>Joined {formatDate(user.created_at)}</span>
                 </article>
               </article>
               <div className="profile-section__card__bio">
