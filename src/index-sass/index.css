@@ -278,4 +278,7 @@ input:-internal-autofill-selected {
     width: 30rem;
     margin: 2.3125rem 0 3rem auto;
   }
+  .footer-profile__bar__list a:hover {
+    text-decoration: underline;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -323,5 +323,14 @@ input:-internal-autofill-selected {
   .footer-profile {
     width: rem(480);
     margin: rem(37) 0 rem(48) auto;
+    &__bar{
+        &__list{
+            a{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
   }
 }
