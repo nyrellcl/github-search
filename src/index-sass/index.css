@@ -164,6 +164,7 @@ input:-internal-autofill-selected {
     justify-content: space-around;
     padding: 1.125rem 0.875rem;
     background-color: #f6f8ff;
+    border-radius: 0.625rem;
   }
   .profile-section__card__socials__count {
     display: flex;

@@ -163,6 +163,7 @@ input:-internal-autofill-selected {
         justify-content: space-around;
         padding: rem(18) rem(14);
         background-color: $light-bg-card;
+        border-radius: rem(10);
         &__count {
           display: flex;
           flex-direction: column;
